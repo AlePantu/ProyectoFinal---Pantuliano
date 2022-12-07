@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic");
+@import url('https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/*html {
+    color-scheme: dark;
+} 
+*/
+
+.button-delete {
+    background: darkred !important;
+}
+
+.button-small {
+    font-size: .8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 1.5rem;
+  }
+
+body {
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+}
+
+p, span, strong, code {
+    font-size: larger;
+}
+
+em {
+    font-size: medium;
+}
+
+
+.container {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.container2 {
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.container3 {
+    
+margin: 30px auto 30px;
+  position: center;
+  width: 460px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px 45px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    box-shadow: 5px 6px 6px rgba(211, 211, 211, 0.3);
+    border: 1px solid rgba(211, 211, 211, 0.384);
+    border-radius: 8px;
+    height: 240px;
+    width: 180px;
+}
+
+.card:hover {
+    transition: .2s ease-in;
+    box-shadow: 10px 10px 30px rgba(211, 211, 211, 0.519);
+}
+
+.card .card-image {
+    text-align: center;
+    font-size: 60px;
+    display: block;
+    width: 1fr;
+}
+
+.card .card-name {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    width: 1fr;
+}
+
+.card .card-price {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    width: 1fr;
+}
+
+.card .card-button {
+    text-align: center;
+    display: block;
+}
+
+.button-add {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    outline: 1px solid rgb(21, 179, 92) !important;
+    line-height: 3rem;
+}
+
+.button-remove {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    outline: 1px solid rgb(241, 7, 7) !important;
+    line-height: 3rem;
+}
+
+.card .card-button button {
+    margin-top: 10px;
+    font-size: 10px !important;
+}
+
+.card .card-button .disabled {
+    background-color: lightgray !important;
+    color: whitesmoke !important;
+}
+
+.card .card-button button:active {
+    background: darkmagenta !important;
+    color: white !important;
+}
+
+.sin-stock {
+    filter: grayscale(100%) opacity(30%);
+}
+
+.card-error {
+    box-shadow: 0px 6px 20px rgba(255, 0, 0, 0.147);
+    border: 1px solid darkred;
+    border-radius: 6px;
+    padding: 40px;
+    color: red;
+}
+
+.centrar-div {
+    text-align: center;
+}
+
+.formulario {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(90, 0, 139, 0.373);
+    box-shadow: 5px 10px 40px lightgray;
+}
+
+.btn-checkout {
+    background-color: rgba(139, 0, 139, 0.175) !important;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 100px;
+    display: inline;
+    padding: 10px;
+    float: right;
+    height: 70px;
+    width: 70px;
+}
+
+.btn-checkout img {
+    width: 60px;
+}
+
+.btn-checkout:hover {
+    box-shadow: 4px 4px 16px rgba(128, 128, 128, 0.476);
+    transition: 0.17s ease-in;
+}
+
+.btn-checkout:active {
+    transition: 0.3s ease-out;
+    filter: grayscale(100%)
+}
+
+.ocultar {
+    display: none !important;
+}
+
+thead tr {
+    background-color: darkmagenta;
+    color: white;
+}
+
+#tablehead {
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(173, 216, 230, 0.252) !important;
+}
+
+.centrar {
+    text-align: center;
+}
+
+#btnComprar:hover {
+    background-color: darkviolet;
+}
+
+#btnComprar:active {
+    background-color: black;
+}
+
+#inputSearch {
+    font-size: larger;
+}
+
+.form fieldset {
+  border: none;
+  padding: 0;
+  padding: 10px 0;
+  position: relative;
+  clear: both;
+}
+.form fieldset.card-expire {
+  float: left;
+  width: 60%;
+}
+.form fieldset.card-expire .select {
+  width: 84px;
+  margin-right: 12px;
+  float: left;
+}
+.form fieldset.fieldset-ccv {
+  clear: none;
+  float: right;
+  width: 86px;
+}
+.form fieldset label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Inconsolata;
+}
+.form fieldset input,
+.form fieldset .select {
+  width: 100%;
+  height: 38px;
+  color: #333333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.form fieldset input.input-cart-number,
+.form fieldset .select.input-cart-number {
+  width: 82px;
+  display: inline-block;
+  margin-right: 8px;
+}
+.form fieldset input.input-cart-number:last-child,
+.form fieldset .select.input-cart-number:last-child {
+  margin-right: 0;
+}
+.form fieldset .select {
+  position: relative;
+}
+
+.form fieldset .select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 100%;
+  outline: none !important;
+  top: 6px;
+  left: 6px;
+  background: none;
+}
+.form fieldset .select select :-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.checkout {
+  margin: 30px auto 30px;
+  position: relative;
+  width: 460px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px 45px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form button {
+  width: 100%;
+  outline: none !important;
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 90px;
+}
+.form button .fa {
+  margin-right: 6px;
+}
+.btn {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 15px 15px;
+  border-radius: 5px;
+  position: relative;
+}
+ 

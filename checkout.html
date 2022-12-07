@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BETONS - Arte en Concreto</title>
+  <link rel="icon" href="images/BETON V101_Logo negativo.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inconsolata'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/variables.js"></script>
+  <script src="js/class.producto.js"></script>
+  <script defer src="js/checkout.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <img class="img_logo" src="images/betonLogoChicoC.png" alt="logo">
+  </header>
+  <main>
+    <div class="container" id="container">
+    </div>
+
+    <div class="carrito" id="carrito">
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th id="tablehead">Producto</th>
+              <th id="tablehead">Importe</th>
+              <th id="tablehead">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="lista">
+
+          </tbody>
+        </table>
+      </section>
+      <label id="total"></label>
+    </div>
+    <div class="container2">
+      <button class="btnTotal" id="btnTotal">Calcular Total</button>
+      <button class="btn-submit" id="btnCotizador">Abrir Cotizador</button>
+      <button class="btn-submit" id="btnSeguir">Seguir comprando</button>
+      <button class="btn-submit" id="btnCheckout">Finalizar compra</button>
+    </div>
+
+    <div id="financiacion" class="container3">
+      <h1>CALCULADOR DE CUOTAS</h1>
+      <h5>Plan Ahora 3/6/12/18/24/30</h5>
+      <input type="number" id="total" placeholder="Ingresa el monto a financiar">
+      <input type="number" id="cuotas" placeholder="Ingresa la cantidad de cuotas 3/6/12/18/24/30 ">
+      <button class="btn-submit" id="btnCalcular">Calcular Financiacion</button>
+
+    </div>
+  </main>
+  <div id="tarjeta">
+    <h1>PAGO</h1>
+    <h3>Datos cargados por default para que no sean cargados por el corrector</h3>
+    <div class="checkout">
+      <label>DATOS TARJETA</label>
+      <form class="form" autocomplete="off">
+        <fieldset>
+          <label for="card-number">Numero Tarjeta</label>
+          <input type="num" id="card-number" class="input-cart-number" maxlength="4" placeholder="1234" />
+          <input type="num" id="card-number1" class="input-cart-number" maxlength="4" placeholder="1234" />
+          <input type="num" id="card-number2" class="input-cart-number" maxlength="4" placeholder="1234" />
+          <input type="num" id="card-number3" class="input-cart-number" maxlength="4" placeholder="1234" />
+        </fieldset>
+        <fieldset>
+          <label for="card-holder">TITULAR</label>
+          <input type="text" id="titularTarjeta" placeholder="NOMBRE APELLIDO" />
+        </fieldset>
+        <fieldset class="card-expire">
+          <label for="expire-month">VENCIMIENTO</label>
+          <div class="select">
+            <select id="expire-month">
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+          </div>
+          <div class="select">
+            <select id="expire-year">
+              <option>2022</option>
+              <option>2023</option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+              <option>2031</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-ccv">
+          <label for="card-ccv">CCV</label>
+          <input type="text" id="tarjeta-ccv" maxlength="4" placeholder="CCV" />
+        </fieldset>
+
+      </form>
+      <button class="btn-submit" id="botonComprar"><i class="fa fa-lock"></i> PAGAR</button>
+    </div>
+  </div>
+
+  <footer id="footer">
+
+  </footer>
+</body>
+
+</html>
